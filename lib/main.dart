@@ -9,19 +9,19 @@ import 'layout_rct.dart';
 import 'layout_t.dart';
 
 void main() {
-  bool dev = true;
+  bool screenshots = false;
 
   Size? maxSize;
-  bool resizable = false;
-  if (dev) {
+  if (screenshots) {
     maxSize = Size(500, 400);
-    resizable = true;
   }
   runApp(DemoFluApp(
-    title: 'Docking (0.3.0)',
+    title: 'Docking (0.4.0)',
     widgetBackground: Colors.white,
     maxSize: maxSize,
-    resizable: resizable,
+    resizable: true,
+    initialHeightWeight: .95,
+    initialWidthWeight: .95,
     sectionsBuilder: (menuNotifier) {
       return [
         Section(name: 'Layouts', examples: [
