@@ -1,5 +1,6 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:docking_demo/item/non_closable.dart';
+import 'package:docking_demo/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 import 'layout/layout_c.dart';
@@ -39,7 +40,8 @@ void main() {
         ]),
         Section(name: 'Item', examples: [
           Example(name: 'Non-closable', content: NonClosableExample())
-        ])
+        ]),
+        Section(examples: [Example(name: 'Theme', content: ThemeExample())])
       ];
     },
   ));
