@@ -1,16 +1,16 @@
 import 'package:docking/docking.dart';
 import 'package:flutter/widgets.dart';
 
-import 'example_widget.dart';
+import '../child_builder_mixin.dart';
 
-class LayoutR extends ExampleStatelessWidget {
+class LayoutC extends StatelessWidget with ChildBuilderMixin {
   @override
   Widget build(BuildContext context) {
     int v = 1;
     Widget child1 = buildChild(v++);
     Widget child2 = buildChild(v++);
     DockingLayout layout = DockingLayout(
-        root: DockingRow([
+        root: DockingColumn([
       DockingItem(name: '1', widget: child1),
       DockingItem(name: '2', widget: child2)
     ]));

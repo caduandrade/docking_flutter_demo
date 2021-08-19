@@ -1,9 +1,9 @@
 import 'package:docking/docking.dart';
 import 'package:flutter/widgets.dart';
 
-import 'example_widget.dart';
+import '../child_builder_mixin.dart';
 
-class LayoutRCT extends ExampleStatelessWidget {
+class LayoutRCT extends StatelessWidget with ChildBuilderMixin {
   @override
   Widget build(BuildContext context) {
     int v = 1;

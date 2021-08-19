@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-abstract class ExampleStatelessWidget extends StatelessWidget {
+mixin ChildBuilderMixin {
   Widget buildChild(int value) {
     return Container(child: Center(child: Text('Child $value')));
   }
