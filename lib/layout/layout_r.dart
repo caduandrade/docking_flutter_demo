@@ -1,7 +1,6 @@
 import 'package:docking/docking.dart';
+import 'package:docking_demo/child_builder_mixin.dart';
 import 'package:flutter/widgets.dart';
-
-import '../child_builder_mixin.dart';
 
 class LayoutR extends StatelessWidget with ChildBuilderMixin {
   @override

@@ -1,5 +1,6 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:docking_demo/item/non_closable.dart';
+import 'package:docking_demo/item/selection_listener.dart';
 import 'package:docking_demo/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-    title: 'Docking (0.4.0)',
+    title: 'Docking (0.5.0)',
     widgetBackground: Colors.white,
     maxSize: maxSize,
     resizable: true,
@@ -39,7 +40,11 @@ void main() {
           Example(name: 'Row > Column > Row', content: LayoutRCR())
         ]),
         Section(name: 'Item', examples: [
-          Example(name: 'Non-closable', content: NonClosableExample())
+          Example(name: 'Non-closable', content: NonClosableExample()),
+          Example(
+              name: 'Selection listener',
+              content: SelectionListenerExample(),
+              consoleEnabled: true)
         ]),
         Section(examples: [Example(name: 'Theme', content: ThemeExample())])
       ];

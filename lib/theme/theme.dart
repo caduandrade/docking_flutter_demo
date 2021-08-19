@@ -1,8 +1,7 @@
 import 'package:docking/docking.dart';
+import 'package:docking_demo/child_builder_mixin.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tabbed_view/tabbed_view.dart';
-
-import '../child_builder_mixin.dart';
 
 class ThemeExample extends StatelessWidget with ChildBuilderMixin {
   @override
