@@ -1,4 +1,6 @@
 import 'package:demoflu/demoflu.dart';
+import 'package:docking_demo/item/close_interceptor.dart';
+import 'package:docking_demo/item/close_listener.dart';
 import 'package:docking_demo/item/non_closable.dart';
 import 'package:docking_demo/item/selection_listener.dart';
 import 'package:docking_demo/theme/theme.dart';
@@ -32,21 +34,56 @@ void main() {
     sectionsBuilder: (menuNotifier) {
       return [
         Section(name: 'Layouts', examples: [
-          Example(name: 'Row', content: LayoutR()),
-          Example(name: 'Column', content: LayoutC()),
-          Example(name: 'Tabs', content: LayoutT()),
-          Example(name: 'Row > Column', content: LayoutRC()),
-          Example(name: 'Row > Column > Tabs', content: LayoutRCT()),
-          Example(name: 'Row > Column > Row', content: LayoutRCR())
+          Example(
+              name: 'Row',
+              content: LayoutR(),
+              codeFile: 'lib/layout/layout_r.dart'),
+          Example(
+              name: 'Column',
+              content: LayoutC(),
+              codeFile: 'lib/layout/layout_c.dart'),
+          Example(
+              name: 'Tabs',
+              content: LayoutT(),
+              codeFile: 'lib/layout/layout_t.dart'),
+          Example(
+              name: 'Row > Column',
+              content: LayoutRC(),
+              codeFile: 'lib/layout/layout_rc.dart'),
+          Example(
+              name: 'Row > Column > Tabs',
+              content: LayoutRCT(),
+              codeFile: 'lib/layout/layout_rct.dart'),
+          Example(
+              name: 'Row > Column > Row',
+              content: LayoutRCR(),
+              codeFile: 'lib/layout/layout_rcr.dart')
         ]),
         Section(name: 'Item', examples: [
-          Example(name: 'Non-closable', content: NonClosableExample()),
+          Example(
+              name: 'Non-closable',
+              content: NonClosableExample(),
+              codeFile: 'lib/item/non_closable.dart'),
           Example(
               name: 'Selection listener',
               content: SelectionListenerExample(),
-              consoleEnabled: true)
+              consoleEnabled: true,
+              codeFile: 'lib/item/selection_listener.dart'),
+          Example(
+              name: 'Close listener',
+              content: CloseListenerExample(),
+              codeFile: 'lib/item/close_listener.dart'),
+          Example(
+              name: 'Close interceptor',
+              content: CloseInterceptorExample(),
+              codeFile: 'lib/item/close_interceptor.dart')
         ]),
-        Section(examples: [Example(name: 'Theme', content: ThemeExample())])
+        Section(examples: [
+          Example(
+              name: 'Theme',
+              content: ThemeExample(),
+              codeFile: 'lib/theme/theme.dart')
+        ])
       ];
     },
   ));
