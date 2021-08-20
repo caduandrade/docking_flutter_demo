@@ -1,6 +1,7 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:docking_demo/item/close_interceptor.dart';
 import 'package:docking_demo/item/close_listener.dart';
+import 'package:docking_demo/item/item_buttons.dart';
 import 'package:docking_demo/item/non_closable.dart';
 import 'package:docking_demo/item/selection_listener.dart';
 import 'package:docking_demo/theme/theme.dart';
@@ -76,7 +77,11 @@ void main() {
           Example(
               name: 'Close interceptor',
               content: CloseInterceptorExample(),
-              codeFile: 'lib/item/close_interceptor.dart')
+              codeFile: 'lib/item/close_interceptor.dart'),
+          Example(
+              name: 'Buttons',
+              content: ItemButtonsExample(),
+              codeFile: 'lib/item/item_buttons.dart')
         ]),
         Section(examples: [
           Example(

@@ -27,7 +27,7 @@ dependencies:
     #path: ../../demoflu/
   docking: #^0.4.0
     path: ../docking_flutter
-  tabbed_view: ^1.4.0
+  tabbed_view: ^1.6.0
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +57,7 @@ flutter:
     - lib/item/selection_listener.dart
     - lib/item/close_listener.dart
     - lib/item/close_interceptor.dart
+    - lib/item/item_buttons.dart
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
