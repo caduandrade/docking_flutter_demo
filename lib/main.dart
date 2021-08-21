@@ -4,6 +4,7 @@ import 'package:docking_demo/item/close_listener.dart';
 import 'package:docking_demo/item/item_buttons.dart';
 import 'package:docking_demo/item/non_closable.dart';
 import 'package:docking_demo/item/selection_listener.dart';
+import 'package:docking_demo/keep_alive.dart';
 import 'package:docking_demo/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -88,6 +89,9 @@ void main() {
               name: 'Theme',
               content: ThemeExample(),
               codeFile: 'lib/theme/theme.dart')
+        ]),
+        Section(examples: [
+          Example(name: 'Keep alive', content: KeepAliveExample())
         ])
       ];
     },
