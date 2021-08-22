@@ -23,7 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  demoflu: ^0.6.1
+  demoflu: ^0.7.1
     #path: ../../demoflu/
   docking: #^0.5.0
     path: ../docking_flutter

@@ -5,15 +5,14 @@ import 'package:docking_demo/item/item_buttons.dart';
 import 'package:docking_demo/item/non_closable.dart';
 import 'package:docking_demo/item/selection_listener.dart';
 import 'package:docking_demo/keep_alive.dart';
+import 'package:docking_demo/layout/layout_c.dart';
+import 'package:docking_demo/layout/layout_r.dart';
+import 'package:docking_demo/layout/layout_rc.dart';
+import 'package:docking_demo/layout/layout_rcr.dart';
+import 'package:docking_demo/layout/layout_rct.dart';
+import 'package:docking_demo/layout/layout_t.dart';
 import 'package:docking_demo/theme/theme.dart';
 import 'package:flutter/material.dart';
-
-import 'layout/layout_c.dart';
-import 'layout/layout_r.dart';
-import 'layout/layout_rc.dart';
-import 'layout/layout_rcr.dart';
-import 'layout/layout_rct.dart';
-import 'layout/layout_t.dart';
 
 enum ScreenshotSize { off, big, small }
 
@@ -33,66 +32,71 @@ void main() {
     resizable: true,
     initialHeightWeight: .95,
     initialWidthWeight: .95,
-    sectionsBuilder: (menuNotifier) {
+    appMenuBuilder: (exampleMenuNotifier) {
       return [
-        Section(name: 'Layouts', examples: [
-          Example(
-              name: 'Row',
-              content: LayoutR(),
-              codeFile: 'lib/layout/layout_r.dart'),
-          Example(
-              name: 'Column',
-              content: LayoutC(),
-              codeFile: 'lib/layout/layout_c.dart'),
-          Example(
-              name: 'Tabs',
-              content: LayoutT(),
-              codeFile: 'lib/layout/layout_t.dart'),
-          Example(
-              name: 'Row > Column',
-              content: LayoutRC(),
-              codeFile: 'lib/layout/layout_rc.dart'),
-          Example(
-              name: 'Row > Column > Tabs',
-              content: LayoutRCT(),
-              codeFile: 'lib/layout/layout_rct.dart'),
-          Example(
-              name: 'Row > Column > Row',
-              content: LayoutRCR(),
-              codeFile: 'lib/layout/layout_rcr.dart')
-        ]),
-        Section(name: 'Item', examples: [
-          Example(
-              name: 'Non-closable',
-              content: NonClosableExample(),
-              codeFile: 'lib/item/non_closable.dart'),
-          Example(
-              name: 'Selection listener',
-              content: SelectionListenerExample(),
-              consoleEnabled: true,
-              codeFile: 'lib/item/selection_listener.dart'),
-          Example(
-              name: 'Close listener',
-              content: CloseListenerExample(),
-              codeFile: 'lib/item/close_listener.dart'),
-          Example(
-              name: 'Close interceptor',
-              content: CloseInterceptorExample(),
-              codeFile: 'lib/item/close_interceptor.dart'),
-          Example(
-              name: 'Buttons',
-              content: ItemButtonsExample(),
-              codeFile: 'lib/item/item_buttons.dart')
-        ]),
-        Section(examples: [
-          Example(
-              name: 'Theme',
-              content: ThemeExample(),
-              codeFile: 'lib/theme/theme.dart')
-        ]),
-        Section(examples: [
-          Example(name: 'Keep alive', content: KeepAliveExample())
-        ])
+        MenuItem(name: 'Layouts', italic: true),
+        MenuItem(
+            name: 'Row',
+            example: LayoutR(),
+            codeFile: 'lib/layout/layout_r.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Column',
+            example: LayoutC(),
+            codeFile: 'lib/layout/layout_c.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Tabs',
+            example: LayoutT(),
+            codeFile: 'lib/layout/layout_t.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Row > Column',
+            example: LayoutRC(),
+            codeFile: 'lib/layout/layout_rc.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Row > Column > Tabs',
+            example: LayoutRCT(),
+            codeFile: 'lib/layout/layout_rct.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Row > Column > Row',
+            example: LayoutRCR(),
+            codeFile: 'lib/layout/layout_rcr.dart',
+            indentation: 2),
+        MenuItem(name: 'Item', italic: true),
+        MenuItem(
+            name: 'Non-closable',
+            example: NonClosableExample(),
+            codeFile: 'lib/item/non_closable.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Selection listener',
+            example: SelectionListenerExample(),
+            consoleEnabled: true,
+            codeFile: 'lib/item/selection_listener.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Close listener',
+            example: CloseListenerExample(),
+            codeFile: 'lib/item/close_listener.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Close interceptor',
+            example: CloseInterceptorExample(),
+            codeFile: 'lib/item/close_interceptor.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Buttons',
+            example: ItemButtonsExample(),
+            codeFile: 'lib/item/item_buttons.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Theme',
+            example: ThemeExample(),
+            codeFile: 'lib/theme/theme.dart'),
+        MenuItem(name: 'Keep alive', example: KeepAliveExample())
       ];
     },
   ));
