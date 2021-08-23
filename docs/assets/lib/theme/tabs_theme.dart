@@ -3,7 +3,7 @@ import 'package:docking_demo/child_builder_mixin.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tabbed_view/tabbed_view.dart';
 
-class ThemeExample extends StatelessWidget with ChildBuilderMixin {
+class TabsThemeExample extends StatelessWidget with ChildBuilderMixin {
   @override
   Widget build(BuildContext context) {
     Widget child1 = buildChild(1);
