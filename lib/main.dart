@@ -12,7 +12,8 @@ import 'package:docking_demo/layout/layout_rc.dart';
 import 'package:docking_demo/layout/layout_rcr.dart';
 import 'package:docking_demo/layout/layout_rct.dart';
 import 'package:docking_demo/layout/layout_t.dart';
-import 'package:docking_demo/theme/theme.dart';
+import 'package:docking_demo/theme/divider_theme.dart';
+import 'package:docking_demo/theme/tabs_theme.dart';
 import 'package:flutter/material.dart';
 
 enum ScreenshotSize { off, big, small }
@@ -27,7 +28,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-    title: 'Docking (0.5.0)',
+    title: 'Docking (0.6.0)',
     widgetBackground: Colors.white,
     maxSize: maxSize,
     resizable: true,
@@ -93,12 +94,25 @@ void main() {
             example: ItemButtonsExample(),
             codeFile: 'lib/item/item_buttons.dart',
             indentation: 2),
+        MenuItem(name: 'Theme', italic: true),
         MenuItem(
-            name: 'Theme',
-            example: ThemeExample(),
-            codeFile: 'lib/theme/theme.dart'),
-        MenuItem(name: 'Keep alive', example: KeepAliveExample()),
-        MenuItem(name: 'Docking buttons', example: ButtonsBuilderExample())
+            name: 'Tabs',
+            example: TabsThemeExample(),
+            codeFile: 'lib/theme/tabs_theme.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Divider',
+            example: DividerThemeExample(),
+            codeFile: 'lib/theme/divider_theme.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Keep alive',
+            example: KeepAliveExample(),
+            codeFile: 'lib/keep_alive.dart'),
+        MenuItem(
+            name: 'Docking buttons',
+            example: ButtonsBuilderExample(),
+            codeFile: 'lib/buttons_builder.dart')
       ];
     },
   ));
