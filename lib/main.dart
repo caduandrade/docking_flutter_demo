@@ -1,4 +1,5 @@
 import 'package:demoflu/demoflu.dart';
+import 'package:docking_demo/buttons_builder.dart';
 import 'package:docking_demo/item/close_interceptor.dart';
 import 'package:docking_demo/item/close_listener.dart';
 import 'package:docking_demo/item/item_buttons.dart';
@@ -96,7 +97,8 @@ void main() {
             name: 'Theme',
             example: ThemeExample(),
             codeFile: 'lib/theme/theme.dart'),
-        MenuItem(name: 'Keep alive', example: KeepAliveExample())
+        MenuItem(name: 'Keep alive', example: KeepAliveExample()),
+        MenuItem(name: 'Docking buttons', example: ButtonsBuilderExample())
       ];
     },
   ));
