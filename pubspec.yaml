@@ -57,6 +57,7 @@ flutter:
     - lib/theme/tabs_theme.dart
     - lib/theme/divider_theme.dart
     - lib/item/non_closable.dart
+    - lib/item/non_maximizable.dart
     - lib/item/selection_listener.dart
     - lib/item/close_listener.dart
     - lib/item/close_interceptor.dart

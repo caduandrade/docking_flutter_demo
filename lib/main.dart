@@ -16,10 +16,12 @@ import 'package:docking_demo/theme/divider_theme.dart';
 import 'package:docking_demo/theme/tabs_theme.dart';
 import 'package:flutter/material.dart';
 
+import 'item/non_maximizable.dart';
+
 enum ScreenshotSize { off, big, small }
 
 void main() {
-  ScreenshotSize screenshotSize = ScreenshotSize.off;
+  ScreenshotSize screenshotSize = ScreenshotSize.small;
 
   Size? maxSize;
   if (screenshotSize == ScreenshotSize.big) {
@@ -72,6 +74,11 @@ void main() {
             name: 'Non-closable',
             example: NonClosableExample(),
             codeFile: 'lib/item/non_closable.dart',
+            indentation: 2),
+        MenuItem(
+            name: 'Non-maximizable',
+            example: NonMaximizableExample(),
+            codeFile: 'lib/item/non_maximizable.dart',
             indentation: 2),
         MenuItem(
             name: 'Selection listener',
