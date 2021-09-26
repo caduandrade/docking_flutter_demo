@@ -23,12 +23,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  demoflu: ^0.7.1
+  demoflu: ^0.8.1
     #path: ../../demoflu/
-  docking: ^0.6.0
-    #path: ../docking_flutter
-  tabbed_view: ^1.7.0
-  multi_split_view: ^1.7.0
+  docking: #^0.6.0
+    path: ../docking_flutter
+  tabbed_view: ^1.10.0
+    #path: ../tabbed_view/
+  multi_split_view: ^1.7.2
 
 dev_dependencies:
   flutter_test:

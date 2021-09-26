@@ -30,12 +30,15 @@ class ButtonsBuilderExample extends StatelessWidget with ChildBuilderMixin {
       // docking area is a DockingTabs
       return [
         TabButton(
-            icon: Icons.tag_faces_outlined, onPressed: () => print('Smile!'))
+            icon: IconProvider.data(Icons.tag_faces_outlined),
+            onPressed: () => print('Smile!'))
       ];
     }
     // docking area is a DockingItem
     return [
-      TabButton(icon: Icons.access_time, onPressed: () => print('Time button!'))
+      TabButton(
+          icon: IconProvider.data(Icons.access_time),
+          onPressed: () => print('Time button!'))
     ];
   }
 }

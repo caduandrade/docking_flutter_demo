@@ -17,10 +17,10 @@ class ItemButtonsExample extends StatelessWidget with ChildBuilderMixin {
         DockingItem(name: '2', widget: child2),
         DockingItem(name: '3', widget: child3, buttons: [
           TabButton(
-              icon: Icons.add_circle_outline,
+              icon: IconProvider.data(Icons.add_circle_outline),
               onPressed: () => _toast(context, 'add button')),
           TabButton(
-              icon: Icons.arrow_drop_down_outlined,
+              icon: IconProvider.data(Icons.arrow_drop_down_outlined),
               menuBuilder: (context) {
                 return [
                   TabbedViewMenuItem(

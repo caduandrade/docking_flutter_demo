@@ -28,7 +28,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-    title: 'Docking (0.6.0)',
+    title: 'Docking (1.0.0)',
     widgetBackground: Colors.white,
     maxSize: maxSize,
     resizable: true,
