@@ -21,7 +21,7 @@ import 'item/non_maximizable.dart';
 enum ScreenshotSize { off, big, small }
 
 void main() {
-  ScreenshotSize screenshotSize = ScreenshotSize.small;
+  ScreenshotSize screenshotSize = ScreenshotSize.off;
 
   Size? maxSize;
   if (screenshotSize == ScreenshotSize.big) {
