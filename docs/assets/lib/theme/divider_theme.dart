@@ -22,10 +22,15 @@ class DividerThemeExample extends StatelessWidget with ChildBuilderMixin {
     MultiSplitViewTheme theme = MultiSplitViewTheme(
         child: docking,
         data: MultiSplitViewThemeData(
-            dividerColor: Colors.lime, dividerThickness: 15));
+            dividerThickness: 15,
+            dividerPainter: DividerPainters.grooved2(
+                backgroundColor: Colors.grey[700]!,
+                color: Colors.grey[400]!,
+                highlightedColor: Colors.white)));
     Container container = Container(
+      padding: EdgeInsets.all(16),
       child: theme,
-      color: Colors.lime,
+      color: Colors.grey[700]!,
     );
     return container;
   }
