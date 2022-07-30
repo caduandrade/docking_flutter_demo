@@ -3,9 +3,9 @@ import 'package:docking/docking.dart';
 import 'package:docking_demo/child_builder_mixin.dart';
 import 'package:flutter/widgets.dart';
 
-class SelectionListenerExample extends StatelessWidget with ChildBuilderMixin {
+class SelectionListenerExample extends Example with ChildBuilderMixin {
   @override
-  Widget build(BuildContext context) {
+  Widget buildMainWidget(BuildContext context) {
     Widget child1 = buildChild(1);
     Widget child2 = buildChild(2);
     Widget child3 = buildChild(3);
@@ -19,7 +19,6 @@ class SelectionListenerExample extends StatelessWidget with ChildBuilderMixin {
         layout: layout,
         onItemSelection: (DockingItem item) {
           DemoFlu.printOnConsole(context, item.name!);
-          print(item.name!);
         });
     return docking;
   }

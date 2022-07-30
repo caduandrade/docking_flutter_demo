@@ -1,10 +1,11 @@
+import 'package:demoflu/demoflu.dart';
 import 'package:docking/docking.dart';
 import 'package:docking_demo/child_builder_mixin.dart';
 import 'package:flutter/widgets.dart';
 
-class LayoutC extends StatelessWidget with ChildBuilderMixin {
+class LayoutC extends Example with ChildBuilderMixin {
   @override
-  Widget build(BuildContext context) {
+  Widget buildMainWidget(BuildContext context) {
     int v = 1;
     Widget child1 = buildChild(v++);
     Widget child2 = buildChild(v++);

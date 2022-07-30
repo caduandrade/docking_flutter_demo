@@ -1,11 +1,11 @@
+import 'package:demoflu/demoflu.dart';
 import 'package:docking/docking.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:tabbed_view/tabbed_view.dart';
 
-class KeepAliveExample extends StatelessWidget {
+class KeepAliveExample extends Example {
   @override
-  Widget build(BuildContext context) {
+  Widget buildMainWidget(BuildContext context) {
     Widget textA = Center(child: Text('A'));
     Widget textB = Center(child: Text('B'));
     Widget textField = Padding(

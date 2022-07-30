@@ -1,11 +1,11 @@
+import 'package:demoflu/demoflu.dart';
 import 'package:docking/docking.dart';
 import 'package:docking_demo/child_builder_mixin.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class CloseListenerExample extends StatelessWidget with ChildBuilderMixin {
+class CloseListenerExample extends Example with ChildBuilderMixin {
   @override
-  Widget build(BuildContext context) {
+  Widget buildMainWidget(BuildContext context) {
     Widget child1 = buildChild(1);
     Widget child2 = buildChild(2);
     Widget child3 = buildChild(3);

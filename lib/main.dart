@@ -30,95 +30,95 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-    title: 'Docking (1.1.0)',
+    title: 'Docking (1.4.0)',
     widgetBackground: Colors.white,
     maxSize: maxSize,
     resizable: true,
     initialHeightWeight: .95,
     initialWidthWeight: .95,
-    appMenuBuilder: (exampleMenuNotifier) {
+    appMenuBuilder: () {
       return [
-        MenuItem(name: 'Layouts', italic: true),
-        MenuItem(
+        DemoMenuItem(name: 'Layouts', italic: true),
+        DemoMenuItem(
             name: 'Row',
-            example: LayoutR(),
+            builder: () => LayoutR(),
             codeFile: 'lib/layout/layout_r.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Column',
-            example: LayoutC(),
+            builder: () => LayoutC(),
             codeFile: 'lib/layout/layout_c.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Tabs',
-            example: LayoutT(),
+            builder: () => LayoutT(),
             codeFile: 'lib/layout/layout_t.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Row > Column',
-            example: LayoutRC(),
+            builder: () => LayoutRC(),
             codeFile: 'lib/layout/layout_rc.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Row > Column > Tabs',
-            example: LayoutRCT(),
+            builder: () => LayoutRCT(),
             codeFile: 'lib/layout/layout_rct.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Row > Column > Row',
-            example: LayoutRCR(),
+            builder: () => LayoutRCR(),
             codeFile: 'lib/layout/layout_rcr.dart',
             indentation: 2),
-        MenuItem(name: 'Item', italic: true),
-        MenuItem(
+        DemoMenuItem(name: 'Item', italic: true),
+        DemoMenuItem(
             name: 'Non-closable',
-            example: NonClosableExample(),
+            builder: () => NonClosableExample(),
             codeFile: 'lib/item/non_closable.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Non-maximizable',
-            example: NonMaximizableExample(),
+            builder: () => NonMaximizableExample(),
             codeFile: 'lib/item/non_maximizable.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Selection listener',
-            example: SelectionListenerExample(),
+            builder: () => SelectionListenerExample(),
             consoleEnabled: true,
             codeFile: 'lib/item/selection_listener.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Close listener',
-            example: CloseListenerExample(),
+            builder: () => CloseListenerExample(),
             codeFile: 'lib/item/close_listener.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Close interceptor',
-            example: CloseInterceptorExample(),
+            builder: () => CloseInterceptorExample(),
             codeFile: 'lib/item/close_interceptor.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Buttons',
-            example: ItemButtonsExample(),
+            builder: () => ItemButtonsExample(),
             codeFile: 'lib/item/item_buttons.dart',
             indentation: 2),
-        MenuItem(name: 'Theme', italic: true),
-        MenuItem(
+        DemoMenuItem(name: 'Theme', italic: true),
+        DemoMenuItem(
             name: 'Tabs',
-            example: TabsThemeExample(),
+            builder: () => TabsThemeExample(),
             codeFile: 'lib/theme/tabs_theme.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Divider',
-            example: DividerThemeExample(),
+            builder: () => DividerThemeExample(),
             codeFile: 'lib/theme/divider_theme.dart',
             indentation: 2),
-        MenuItem(
+        DemoMenuItem(
             name: 'Keep alive',
-            example: KeepAliveExample(),
+            builder: () => KeepAliveExample(),
             codeFile: 'lib/keep_alive.dart'),
-        MenuItem(
+        DemoMenuItem(
             name: 'Docking buttons',
-            example: ButtonsBuilderExample(),
+            builder: () => ButtonsBuilderExample(),
             codeFile: 'lib/buttons_builder.dart')
       ];
     },
