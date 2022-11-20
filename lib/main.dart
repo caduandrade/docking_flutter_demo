@@ -13,6 +13,7 @@ import 'package:docking_demo/layout/layout_rcr.dart';
 import 'package:docking_demo/layout/layout_rct.dart';
 import 'package:docking_demo/layout/layout_t.dart';
 import 'package:docking_demo/theme/divider_theme.dart';
+import 'package:docking_demo/theme/hide_tabs_area_theme.dart';
 import 'package:docking_demo/theme/tabs_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +31,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-    title: 'Docking (1.4.0)',
+    title: 'Docking (1.5.0)',
     widgetBackground: Colors.white,
     maxSize: maxSize,
     resizable: true,
@@ -111,6 +112,11 @@ void main() {
             name: 'Divider',
             builder: () => DividerThemeExample(),
             codeFile: 'lib/theme/divider_theme.dart',
+            indentation: 2),
+        DemoMenuItem(
+            name: 'Tabs area visible',
+            builder: () => HideTabsAreaThemeExample(),
+            codeFile: 'lib/theme/hide_tabs_area_theme.dart',
             indentation: 2),
         DemoMenuItem(
             name: 'Keep alive',
