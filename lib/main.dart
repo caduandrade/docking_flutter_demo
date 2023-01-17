@@ -3,6 +3,7 @@ import 'package:docking_demo/buttons_builder.dart';
 import 'package:docking_demo/item/close_interceptor.dart';
 import 'package:docking_demo/item/close_listener.dart';
 import 'package:docking_demo/item/item_buttons.dart';
+import 'package:docking_demo/item/item_leading.dart';
 import 'package:docking_demo/item/non_closable.dart';
 import 'package:docking_demo/item/selection_listener.dart';
 import 'package:docking_demo/keep_alive.dart';
@@ -31,7 +32,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-    title: 'Docking (1.5.0)',
+    title: 'Docking (1.6.0)',
     widgetBackground: Colors.white,
     maxSize: maxSize,
     resizable: true,
@@ -101,6 +102,11 @@ void main() {
             name: 'Buttons',
             builder: () => ItemButtonsExample(),
             codeFile: 'lib/item/item_buttons.dart',
+            indentation: 2),
+        DemoMenuItem(
+            name: 'Leading widget',
+            builder: () => ItemLeading(),
+            codeFile: 'lib/item/item_leading.dart',
             indentation: 2),
         DemoMenuItem(name: 'Theme', italic: true),
         DemoMenuItem(
