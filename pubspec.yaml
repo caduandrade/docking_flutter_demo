@@ -23,8 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  demoflu: ^0.16.0
-    #path: ../../demoflu/
+  demoflu: ^1.2.1
+    #path: ../demoflu/
   docking: 1.6.0
     #path: ../docking_flutter
 
@@ -45,24 +45,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/layout/layout_c.dart
-    - lib/layout/layout_r.dart
-    - lib/layout/layout_rc.dart
-    - lib/layout/layout_rcr.dart
-    - lib/layout/layout_rct.dart
-    - lib/layout/layout_t.dart
-    - lib/theme/tabs_theme.dart
-    - lib/theme/divider_theme.dart
-    - lib/theme/hide_tabs_area_theme.dart
-    - lib/item/non_closable.dart
-    - lib/item/non_maximizable.dart
-    - lib/item/selection_listener.dart
-    - lib/item/close_listener.dart
-    - lib/item/close_interceptor.dart
-    - lib/item/item_buttons.dart
-    - lib/item/item_leading.dart
-    - lib/keep_alive.dart
-    - lib/buttons_builder.dart
+    - lib/examples/
+    - lib/examples/item/
+    - lib/examples/layout/
+    - lib/examples/theme/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
