@@ -31,7 +31,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-      title: 'Docking (1.6.0)',
+      title: 'Docking (1.7.0)',
       widthWeight: .95,
       heightWeight: .95,
       exampleBackground: Colors.white,

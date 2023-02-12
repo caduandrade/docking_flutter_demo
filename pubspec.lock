@@ -53,10 +53,10 @@ packages:
     dependency: "direct main"
     description:
       name: docking
-      sha256: bdedf23198766a0ddba6ae3299e797acf5d4a1cb17b600a8cc642c97bce67c48
+      sha256: "35f080d6d5f24f0ea81a543ecfc6078fe7bf2c26bc508c233e0f2589f59213b1"
       url: "https://pub.dev"
     source: hosted
-    version: "1.6.0"
+    version: "1.7.0"
   fake_async:
     dependency: transitive
     description:
@@ -148,10 +148,10 @@ packages:
     dependency: transitive
     description:
       name: multi_split_view
-      sha256: "6ebb0e03ce62aba892015ce7e8eec27d1043349b583143925af474957f5d1cdf"
+      sha256: f39fdb5559538cd1ff0ca16b9c9d1ac3c059489cceb152c88de451e9365c519d
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.0"
+    version: "2.3.1"
   path:
     dependency: transitive
     description:
