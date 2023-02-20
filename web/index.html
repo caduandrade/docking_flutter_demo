@@ -40,18 +40,25 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
-  <script>
+<img id="loading" src="ripple.gif" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" />
+<!--div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+  <span style="color:black">Loading...</span>
+</div-->
+<script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
+        onEntrypointLoaded: async function(engineInitializer) {
+            let appRunner = await engineInitializer.initializeEngine();
+            await appRunner.runApp();
+            var loading = document.getElementById('loading');
+            if (loading) {
+              loadingIndicator.remove();
+            }
+          }
       });
     });
   </script>
