@@ -1,5 +1,6 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:docking_demo/examples/buttons_builder.dart';
+import 'package:docking_demo/examples/item/changing_item.dart';
 import 'package:docking_demo/examples/item/close_interceptor.dart';
 import 'package:docking_demo/examples/item/close_listener.dart';
 import 'package:docking_demo/examples/item/item_buttons.dart';
@@ -34,7 +35,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-      title: 'Docking (1.8.0)',
+      title: 'Docking (1.10.0)',
       widthWeight: .95,
       heightWeight: .95,
       exampleBackground: Colors.white,
@@ -75,7 +76,8 @@ DemoMenuItem get _dockingItem => DemoMenuItem('DockingItem', children: [
       _closeListener,
       _closeInterceptor,
       _buttons,
-      _leadingWidget
+      _leadingWidget,
+      _changingItem
     ]);
 
 DemoMenuItem get _nonClosable =>
@@ -98,6 +100,9 @@ DemoMenuItem get _buttons =>
 
 DemoMenuItem get _leadingWidget =>
     DemoMenuItem('Leading widget', example: ItemLeading());
+
+DemoMenuItem get _changingItem =>
+    DemoMenuItem('Changing item', example: ChangingItemExample());
 
 DemoMenuItem get _size => DemoMenuItem('Size',
     children: [_minimalSize, _initialSize, _initialWeight]);

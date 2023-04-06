@@ -2,7 +2,6 @@ import 'package:demoflu/demoflu.dart';
 import 'package:docking/docking.dart';
 import 'package:docking_demo/examples/child_builder_mixin.dart';
 import 'package:flutter/material.dart';
-import 'package:tabbed_view/tabbed_view.dart';
 
 class ItemButtonsExample extends Example {
   ItemButtonsExample()
