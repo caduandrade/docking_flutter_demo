@@ -15,6 +15,7 @@ import 'package:docking_demo/examples/layout/layout_rc.dart';
 import 'package:docking_demo/examples/layout/layout_rcr.dart';
 import 'package:docking_demo/examples/layout/layout_rct.dart';
 import 'package:docking_demo/examples/layout/layout_t.dart';
+import 'package:docking_demo/examples/layout/remove_by_id.dart';
 import 'package:docking_demo/examples/size/initial_size.dart';
 import 'package:docking_demo/examples/size/initial_weight.dart';
 import 'package:docking_demo/examples/size/minimal_size.dart';
@@ -35,7 +36,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-      title: 'Docking (1.10.0)',
+      title: 'Docking (1.11.0)',
       widthWeight: .95,
       heightWeight: .95,
       exampleBackground: Colors.white,
@@ -52,7 +53,8 @@ DemoMenuItem get _layouts => DemoMenuItem('Layouts', children: [
       _layoutT,
       _layoutRC,
       _layoutRCT,
-      _layoutRCR
+      _layoutRCR,
+      _removeById
     ]);
 
 DemoMenuItem get _layoutR => DemoMenuItem('Row', example: LayoutR());
@@ -68,6 +70,9 @@ DemoMenuItem get _layoutRCT =>
 
 DemoMenuItem get _layoutRCR =>
     DemoMenuItem('Row > Column > Row', example: LayoutRCR());
+
+DemoMenuItem get _removeById =>
+    DemoMenuItem('Remove by id', example: RemoveById());
 
 DemoMenuItem get _dockingItem => DemoMenuItem('DockingItem', children: [
       _nonClosable,
