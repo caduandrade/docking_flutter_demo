@@ -16,6 +16,7 @@ import 'package:docking_demo/examples/layout/layout_rcr.dart';
 import 'package:docking_demo/examples/layout/layout_rct.dart';
 import 'package:docking_demo/examples/layout/layout_t.dart';
 import 'package:docking_demo/examples/layout/remove_by_id.dart';
+import 'package:docking_demo/examples/layout/stringify_custom_id.dart';
 import 'package:docking_demo/examples/size/initial_size.dart';
 import 'package:docking_demo/examples/size/initial_weight.dart';
 import 'package:docking_demo/examples/size/minimal_size.dart';
@@ -23,6 +24,8 @@ import 'package:docking_demo/examples/theme/divider_theme.dart';
 import 'package:docking_demo/examples/theme/hide_tabs_area_theme.dart';
 import 'package:docking_demo/examples/theme/tabs_theme.dart';
 import 'package:flutter/material.dart';
+
+import 'examples/layout/save_load.dart';
 
 enum ScreenshotSize { off, big, small }
 
@@ -36,7 +39,7 @@ void main() {
     maxSize = Size(500, 200);
   }
   runApp(DemoFluApp(
-      title: 'Docking (1.12.0)',
+      title: 'Docking (1.14.0)',
       widthWeight: .95,
       heightWeight: .95,
       exampleBackground: Colors.white,
@@ -54,7 +57,9 @@ DemoMenuItem get _layouts => DemoMenuItem('Layouts', children: [
       _layoutRC,
       _layoutRCT,
       _layoutRCR,
-      _removeById
+      _removeById,
+      _saveLoad,
+  _stringifyCustomId
     ]);
 
 DemoMenuItem get _layoutR => DemoMenuItem('Row', example: LayoutR());
@@ -73,6 +78,13 @@ DemoMenuItem get _layoutRCR =>
 
 DemoMenuItem get _removeById =>
     DemoMenuItem('Remove by id', example: RemoveById());
+
+DemoMenuItem get _saveLoad =>
+    DemoMenuItem('Save and load', example: SaveRestore());
+
+DemoMenuItem get _stringifyCustomId =>
+    DemoMenuItem('Stringify - Custom Id', example: StringifyCustomId());
+
 
 DemoMenuItem get _dockingItem => DemoMenuItem('DockingItem', children: [
       _nonClosable,

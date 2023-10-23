@@ -52,11 +52,10 @@ packages:
   docking:
     dependency: "direct main"
     description:
-      name: docking
-      sha256: "51cde49e3ead2a10c238e7f4fee73d432e994ba8f8403aa62244272210e96811"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.12.0"
+      path: "../docking_flutter"
+      relative: true
+    source: path
+    version: "1.13.0"
   fake_async:
     dependency: transitive
     description:
