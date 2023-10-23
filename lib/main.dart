@@ -58,8 +58,7 @@ DemoMenuItem get _layouts => DemoMenuItem('Layouts', children: [
       _layoutRCT,
       _layoutRCR,
       _removeById,
-      _saveLoad,
-  _stringifyCustomId
+      _saveLoad
     ]);
 
 DemoMenuItem get _layoutR => DemoMenuItem('Row', example: LayoutR());
@@ -79,12 +78,11 @@ DemoMenuItem get _layoutRCR =>
 DemoMenuItem get _removeById =>
     DemoMenuItem('Remove by id', example: RemoveById());
 
-DemoMenuItem get _saveLoad =>
-    DemoMenuItem('Save and load', example: SaveRestore());
+DemoMenuItem get _saveLoad => DemoMenuItem('Save and load',
+    example: SaveRestore(), children: [_stringifyCustomId]);
 
 DemoMenuItem get _stringifyCustomId =>
     DemoMenuItem('Stringify - Custom Id', example: StringifyCustomId());
-
 
 DemoMenuItem get _dockingItem => DemoMenuItem('DockingItem', children: [
       _nonClosable,
